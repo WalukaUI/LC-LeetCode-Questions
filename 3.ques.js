@@ -12,9 +12,7 @@ function twoSum(nums, target) {
                 }
         }
         }
-   
         var getRemainder= (target-nums[i])
-        
         let newarray= nums.slice(i+1, nums.length)
         let checkRemainder = newarray.find((x)=>x === getRemainder)
         let indexoftheNum= newarray.indexOf(getRemainder)
@@ -22,9 +20,6 @@ function twoSum(nums, target) {
         if(checkRemainder !== undefined){
             return [i, indexoftheNum+i+1]
         }
-    
     }
-    
 };
-
 console.log(twoSum(nums, target));
