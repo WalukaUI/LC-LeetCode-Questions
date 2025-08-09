@@ -11,7 +11,14 @@ function topKFrequent(num, kk) {
             newObj[x].push(x)
         }
     }
-    return Object.values(newObj).sort((a,b)=> b.length - a.length).slice(0, kk)
+    let uniqVals = Object.values(newObj).sort((a,b)=> b.length - a.length).slice(0, kk)
+    let newarray= []
+    for (let i = 0; i < uniqVals.length; i++) {
+        newarray.push(uniqVals[i][0])
+        
+    }
+    return newarray
+    
 }
 
 console.log(topKFrequent(nums, k));
