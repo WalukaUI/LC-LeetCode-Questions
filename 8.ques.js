@@ -13,7 +13,7 @@ function longestConsecutive(nums) {
         }
         
     }
-    console.log(newset);
+    console.log(Object.);
     
 }
 
