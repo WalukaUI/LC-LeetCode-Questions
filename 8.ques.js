@@ -1,20 +1,18 @@
 let nums = [100,4,200,1,3,2]
 function longestConsecutive(nums) {
+    if (nums == null || nums.length === 0) return 0;
+
     let numSet = new Set(nums)
-    var longest = 0
-    for(const x of nums){  
-        if(numSet.has(x-1) === false){
-            var length = 0
-            while (numSet.has(x+length)) {
-                 length++
-            }
-           longest = Math.max(length, longest)
+    let longest = 0
+    for(let x of nums){  
+        if(numSet.has(x-1)) continue;
+        var length = 0
+        while (numSet.has(x+length)) {
+            length++
         }
+        longest = Math.max(length, longest)
     }
-
     return longest
-
-    
 }
 
 console.log(longestConsecutive(nums));
