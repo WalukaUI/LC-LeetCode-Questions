@@ -14,14 +14,8 @@ function twoSum(sorted, tgt) {
         start++
      }else{
         return [sorted[start], sorted[end]]
-     }
-     
-  }
-
-  console.log(sorted[start], sorted[end]);
-  
-    
-
+     } 
+  }   
 }
 
 
